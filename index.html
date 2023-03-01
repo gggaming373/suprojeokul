@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suyu Ne Kadar Kullanıyorum</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+    <noscript>Bu Sitenin Çalışması İçin Javascript Aç</noscript>
+
+
+    <h1 id="baslik">Suyu Ne Kadar Kullanıyorum?</h1>
+    <h1 id="altbaslik">Aşağıdaki Testi Yap</h1>
+
+
+    <section class="sorular" id="sorular">
+    <br>
+
+
+        <p>1. Evinizde hiç damlayan musluk var mı? (Bozuk da denilebilir.)</p>
+            <button onclick="dmevet()" id="dmevetbtn">Evet</button>
+            <button onclick="dmhayir()" id="dmhayirbtn">Hayır</button>
+        <p id="dipnot">Bozuk musluğunuzu düzeltmek size hafta 90 litre su tasarufu sağlayacaktır</p>
+
+
+        <p>2. Haftada Kaç Kez Çamaşır Makinesi Çalıştırılıyor?</p>
+            <input on id="cmakineinput" type="number" placeholder="Sayıyı Girin...">
+        <p id="dipnot">Çamaşır makinesi dolu iken çalıştırırsanız daha az kez makineyi çalıştırmanız gerekir böylece su tüketiminiz azalır</p>
+        
+        
+        <p>3. Haftada kaç kez banyo (küvette yıkanma) veya duş alıyorsunuz?</p>
+            <button id="baynobtn" onclick="banyo()">Banyo</button>
+            <button id="dusbtn" onclick="dus()">Duş</button>
+            <input type="number" placeholder="Sayıyı Girin..." id="bdinput">
+
+
+        <p id="dipnot">Banyo yerine duş alın.</p>
+
+
+        <p>4. Ön yıkama yapılıyor mu? </p>
+        <button id="onyikamavarbtn" onclick="onyikamavardef()">Ön Yıkama Var</button>
+        <button id="onyikamayokbtn" onclick="onyikamayokdef()">Ön Yıkama Yok</button>
+        <p id="dipnot">ön yıkama yerine tabaktakı yemek artıklarını sıyırarak temizleyin.</p>
+
+
+        <p>5. Haftada Kaç Kez Bulaşık Makinesi Çalıştırılıyor? </p>
+
+        <input type="number" placeholder="Sayıyı Girin..." id="bmakine">
+        <p id="dipnot">Bulaşık makinesi dolu iken çalıştırırsanız daha az kez makineyi çalıştırmanız gerekir böylece su tüketiminiz azalır.</p>
+
+
+
+
+
+        
+
+        <p>6. Haftada Kaç Kez Dişinizi Fırçalıyorsunuz? Suyu Açık Bırakıyor Musun?</p>
+
+        <button onclick="disevetdef()" id="disevetbtn">Evet</button>
+
+        <button onclick="dishayirdef()" id="dishayirbtn">Hayır</button>
+
+        
+        <input type="number" placeholder="Sayıyı Girin..." id="disinput">
+
+
+
+
+        <p id="dipnot">Dişinizi Fırçalarken Suyu Kapatmak 5 Litre tasaruf Yapmanızı Sağlar</p>
+
+
+        <br>
+    </section>
+
+
+
+
+        <h1 id="altbaslik">Kaynakça</h1>
+
+    <div>
+        <a href="https://www.gwmwater.org.au/conserving-water/saving-water/how-much-water-you-use#:~:text=For%20handwashing%2C%20brushing%20teeth%2C%20cooking,about%205%20litres%20of%20water">How Much Water You Use GWMWater</a>
+        <a href="https://onedio.com/haber/su-tasarrufu-icin-oneriler-335111">Su Tasarrufu İçin 20 Altın Öneri</a>
+        <a href="https://cokokuyancokgezen.com/evde-su-tasarrufu/">Evde Su Tasarrufu için Neler Yapılabilir? - Su Tüketimini Azaltmanın Yolları</a>
+        <a href="https://stories.oras.com/en/brushing-your-teeth-takes-19-liters-of-water">Brushing your teeth takes 19 liters of water</a>
+    </div>
+        <h1 id="altbaslik">Milanote, GitHub Repo ve CodePen</h1>
+    <div class="milanote">
+        <iframe src="https://app.milanote.com/1Pj96g1uhzLt0B?p=hrAwky3N6Pb" width="800" height="500" frameborder="0"></iframe>
+        <section>
+            <a href="https://github.com/gggaming373/suprojeokul">GitHub</a>
+            <a href="https://codepen.io/Anl-Bademci/pen/YzOPVgq">CodePen</a>
+        </section>
+        
+    </div>
+    <h1 id="susayaci">Şu Kadar Su Kullanıyorsun : 0</h1>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
