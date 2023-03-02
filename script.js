@@ -45,10 +45,19 @@ const cminput = document.getElementById("cmakineinput");
 cminput.addEventListener('change', updateValue);
 
 function updateValue(e) {
-    sumiktari = sumiktari - cm;
-    sumiktari = sumiktari + parseInt(e.target.value)*40;
-    susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
-    cm = parseInt(e.target.value)*40;
+    if (e.target.value == ""){
+        alert("bos yazı bıraktığın için değeri sıfır olarak kabul edildi")
+        sumiktari = sumiktari - cm;
+        sumiktari = sumiktari + 0;
+        susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
+        cm = 0;
+    }
+    else{
+        sumiktari = sumiktari - cm;
+        sumiktari = sumiktari + parseInt(e.target.value)*40;
+        susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
+        cm = parseInt(e.target.value)*40;
+    }
 }
 
 
@@ -81,6 +90,14 @@ function banyo(){
 
 
 function updateValuebd(e) {
+    if (e.target.value == ""){
+        alert("bos yazı bıraktığın için değeri sıfır olarak kabul edildi")
+        sumiktari = sumiktari - banyovedustotalsu;
+        sumiktari = sumiktari + 0;
+        susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
+        banyovedustotalsu = 0;
+    }
+    else{
     if (banyomu == true){
         sumiktari = sumiktari - banyovedustotalsu;
         sumiktari = sumiktari + parseInt(e.target.value)*130;
@@ -93,6 +110,7 @@ function updateValuebd(e) {
         sumiktari = sumiktari + parseInt(e.target.value)*90;
         susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
         banyovedustotalsu = parseInt(e.target.value)*90;
+        }   
     }
 }
 
@@ -118,6 +136,14 @@ function onyikamavardef(){
     onyikamavarmi = true;
 }
 function updateValuebm(e){
+    if (e.target.value == ""){
+        alert("bos yazı bıraktığın için değeri sıfır olarak kabul edildi")
+        sumiktari = sumiktari - bulasiksayi;
+        sumiktari = sumiktari + 0;
+        susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
+        bulasiksayi = 0;
+    }
+    else{
     if (onyikamavarmi == false){
         sumiktari = sumiktari - bulasiksayi;
         sumiktari = sumiktari + parseInt(e.target.value)*20
@@ -129,7 +155,7 @@ function updateValuebm(e){
         sumiktari = sumiktari + parseInt(e.target.value)*22
         susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
         bulasiksayi = parseInt(e.target.value)*22;
-    }
+    }}
 
 }
 
@@ -141,6 +167,14 @@ dishayirbtn = document.getElementById('dishayirbtn')
 disinput = document.getElementById('disinput');
 disinput.addEventListener('change', updateValuedis);
 function updateValuedis(e){
+    if (e.target.value==""){
+        alert("bos yazı bıraktığın için değeri sıfır olarak kabul edildi")
+        sumiktari = sumiktari - dissayi;
+        sumiktari = sumiktari + 0
+        susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
+        dissayi = 0;
+    }
+    else {
     if (suacikmi == false){
         sumiktari = sumiktari - dissayi;
         sumiktari = sumiktari + parseInt(e.target.value)*10
@@ -152,7 +186,7 @@ function updateValuedis(e){
         sumiktari = sumiktari + parseInt(e.target.value)*15
         susayaci.innerHTML = "Şu Kadar Su Kullanıyorsun : " + sumiktari;
         dissayi = parseInt(e.target.value)*15;
-    }
+    }}
     
 }
 
